@@ -1,0 +1,34 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Route
+description: A route is a GeoJSON feature with a MultiLineString geometry and a length
+  in metres.
+type: object
+allOf:
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+- properties:
+    geometry:
+      properties:
+        type:
+          const: MultiLineString
+    properties:
+      type: object
+      required:
+      - length
+      properties:
+        length:
+          type: number
+          exclusiveMinimum: 0
+          description: Length of the route, in metres.
+          x-jsonld-id: http://www.opengis.net/def/dataType/OGC/1.1/length
+        name:
+          type: string
+          description: Human-readable name of the route.
+          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
+  required:
+  - geometry
+  - properties
+x-bblocks-metadata:
+  itemIdentifier: ogc.demo.route
+  register: https://avillar.github.io/bblocks-routes-demo/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-29'

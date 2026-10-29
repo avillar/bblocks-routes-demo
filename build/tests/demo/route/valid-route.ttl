@@ -1,0 +1,12 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.opengis.net/def/dataType/OGC/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///github/workspace/test-route-1> a geojson:Feature ;
+    rdfs:label "Madrid test route" ;
+    ns1:length 3100 ;
+    geojson:geometry [ a geojson:MultiLineString ;
+            geojson:coordinates ( ( ( -3.7038e+00 4.04168e+01 ) ( -3.69e+00 4.042e+01 ) ) ( ( -3.68e+00 4.0425e+01 ) ( -3.67e+00 4.043e+01 ) ) ) ] .
+

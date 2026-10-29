@@ -1,0 +1,110 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix shacl: <https://www.w3.org/TR/shacl/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bblocks://ogc.demo.route> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Route" ;
+    dct:abstract "A route: a road or path, described as a feature with a length in metres and a line geometry."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/bblocks-routes-demo/build/generateddocs/json-full/demo/route/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/bblocks-routes-demo/build/generateddocs/markdown/demo/route/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/bblocks-routes-demo/bblock/ogc.demo.route> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-10-29"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
+    skos:inScheme <https://avillar.github.io/bblocks-routes-demo/> ;
+    skos:prefLabel "Route" ;
+    skos:topConceptOf <https://avillar.github.io/bblocks-routes-demo/> ;
+    dcat:keyword "demo",
+        "route" ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.geo.features.feature> ;
+    bblocks:hasSourceJsonLdContext <https://avillar.github.io/bblocks-routes-demo/_sources/route/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://avillar.github.io/bblocks-routes-demo/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N92d8b42452c74f8fa131119681647646 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-10-29T15:09:05.420188"^^xsd:dateTime ;
+            prov:startedAtTime "2026-10-29T15:09:05.274521"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:76c91c3bcd79fb1765275324fc46779b377345e9" ;
+                    rdfs:seeAlso <https://avillar.github.io/bblocks-routes-demo/build/register.json> ] ;
+            prov:wasAssociatedWith _:N92d8b42452c74f8fa131119681647646 ] .
+
+<https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> rdfs:label "OGC API - Features, Part 1: Core (Feature Response)" .
+
+<https://avillar.github.io/bblocks-routes-demo/> a skos:ConceptScheme,
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
+    rdfs:label "Building Blocks - Routes demo register" ;
+    dct:abstract """A tiny demo register with one building block: a data model for routes.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:description """Created from the [OGC building block template](https://github.com/opengeospatial/bblock-template)
+to show how a new building block is defined, documented and tested. It reuses the OGC feature model.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2026-10-29T15:09:04.189595"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.demo.route> ;
+    skos:prefLabel "Building Blocks - Routes demo register" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/bblocks-routes-demo/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/bblocks-routes-demo/build/bblocks.jsonld> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/bblocks-routes-demo/build/bblocks.ttl> ] ;
+    foaf:homepage <https://avillar.github.io/bblocks-routes-demo/> ;
+    bblocks:hasValidationReport <https://avillar.github.io/bblocks-routes-demo/build/tests/report.html> .
+
+_:N92d8b42452c74f8fa131119681647646 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.36" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
+

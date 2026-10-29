@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "ogc.demo.route",
+  "name": "Route",
+  "abstract": "A route: a road or path, described as a feature with a length in metres and a line geometry.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-29T00:00:00Z",
+  "itemClass": "schema",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Features, Part 1: Core (Feature Response)",
+      "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+    }
+  ],
+  "tags": [
+    "route",
+    "demo"
+  ],
+  "shaclShapes": {
+    "ogc.geo.features.feature": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.geo.features.feature"
+  ],
+  "dateOfLastChange": "2026-10-29",
+  "ldContext": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/context.jsonld",
+  "schema": {
+    "application/yaml": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/schema.yaml",
+    "application/json": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/schema.json"
+  },
+  "sourceSchema": "https://avillar.github.io/bblocks-routes-demo/_sources/route/schema.yaml",
+  "sourceLdContext": "https://avillar.github.io/bblocks-routes-demo/_sources/route/context.jsonld",
+  "resolvedSchemaProperties": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/resolvedProperties.json",
+  "sourceFiles": "https://avillar.github.io/bblocks-routes-demo/_sources/route/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/avillar/bblocks-routes-demo/blob/master/build/tests/demo/route/",
+  "description": "# Route\n\nA **route** is a road or path that can be followed from one place to another.\n\nIn this model a route is an ordinary OGC *feature* (so it can be shared and mapped like any other), with:\n\n- a **geometry** made of one or more lines (`MultiLineString`), so a route can have several segments;\n- a **`length`** in metres (required, greater than zero);\n- an optional **`name`**.\n\nSee the example for a short route in Valencia, Spain.\n",
+  "examples": [
+    {
+      "title": "Riverside route in Valencia",
+      "content": "A short route of two separate segments, with its length in metres.",
+      "base-uri": "https://example.com/routes/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://avillar.github.io/bblocks-routes-demo/_sources/route/examples/valencia-route.json",
+          "url": "https://avillar.github.io/bblocks-routes-demo/build/tests/demo/route/example_1_1.json",
+          "sizeBytes": 345,
+          "code": "{\n  \"type\": \"Feature\",\n  \"id\": \"valencia-turia-1\",\n  \"geometry\": {\n    \"type\": \"MultiLineString\",\n    \"coordinates\": [\n      [[-0.3763, 39.4699], [-0.3702, 39.4725], [-0.3651, 39.4780]],\n      [[-0.3600, 39.4810], [-0.3549, 39.4864], [-0.3490, 39.4915]]\n    ]\n  },\n  \"properties\": {\n    \"name\": \"Turia riverside route\",\n    \"length\": 2850\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://avillar.github.io/bblocks-routes-demo/build/tests/demo/route/example_1_1.jsonld",
+          "sizeBytes": 688,
+          "code": "{\n  \"@context\": \"https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/context.jsonld\",\n  \"type\": \"Feature\",\n  \"id\": \"valencia-turia-1\",\n  \"geometry\": {\n    \"type\": \"MultiLineString\",\n    \"coordinates\": [\n      [\n        [\n          -0.3763,\n          39.4699\n        ],\n        [\n          -0.3702,\n          39.4725\n        ],\n        [\n          -0.3651,\n          39.478\n        ]\n      ],\n      [\n        [\n          -0.36,\n          39.481\n        ],\n        [\n          -0.3549,\n          39.4864\n        ],\n        [\n          -0.349,\n          39.4915\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"name\": \"Turia riverside route\",\n    \"length\": 2850\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://avillar.github.io/bblocks-routes-demo/build/tests/demo/route/example_1_1.ttl",
+          "sizeBytes": 670,
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix ns1: <http://www.opengis.net/def/dataType/OGC/1.1/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.com/routes/valencia-turia-1> a geojson:Feature ;\n    rdfs:label \"Turia riverside route\" ;\n    ns1:length 2850 ;\n    geojson:geometry [ a geojson:MultiLineString ;\n            geojson:coordinates ( ( ( -3.763e-01 3.94699e+01 ) ( -3.702e-01 3.94725e+01 ) ( -3.651e-01 3.9478e+01 ) ) ( ( -3.6e-01 3.9481e+01 ) ( -3.549e-01 3.94864e+01 ) ( -3.49e-01 3.94915e+01 ) ) ) ] .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Route\ndescription: A route is a GeoJSON feature with a MultiLineString geometry and a length\n  in metres.\ntype: object\nallOf:\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n- properties:\n    geometry:\n      properties:\n        type:\n          const: MultiLineString\n    properties:\n      type: object\n      required:\n      - length\n      properties:\n        length:\n          type: number\n          exclusiveMinimum: 0\n          description: Length of the route, in metres.\n          x-jsonld-id: http://www.opengis.net/def/dataType/OGC/1.1/length\n        name:\n          type: string\n          description: Human-readable name of the route.\n          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\n  required:\n  - geometry\n  - properties\nx-bblocks-metadata:\n  itemIdentifier: ogc.demo.route\n  register: https://avillar.github.io/bblocks-routes-demo/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-29'\n",
+  "gitRepository": "https://github.com/avillar/bblocks-routes-demo",
+  "gitPath": "_sources/route"
+}

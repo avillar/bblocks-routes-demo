@@ -1,0 +1,42 @@
+{
+  "@context": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/context.jsonld",
+  "type": "Feature",
+  "id": "valencia-turia-1",
+  "geometry": {
+    "type": "MultiLineString",
+    "coordinates": [
+      [
+        [
+          -0.3763,
+          39.4699
+        ],
+        [
+          -0.3702,
+          39.4725
+        ],
+        [
+          -0.3651,
+          39.478
+        ]
+      ],
+      [
+        [
+          -0.36,
+          39.481
+        ],
+        [
+          -0.3549,
+          39.4864
+        ],
+        [
+          -0.349,
+          39.4915
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "name": "Turia riverside route",
+    "length": 2850
+  }
+}

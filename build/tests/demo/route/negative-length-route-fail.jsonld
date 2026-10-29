@@ -1,0 +1,24 @@
+{
+  "@context": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/context.jsonld",
+  "type": "Feature",
+  "id": "test-route-2",
+  "geometry": {
+    "type": "MultiLineString",
+    "coordinates": [
+      [
+        [
+          -3.7038,
+          40.4168
+        ],
+        [
+          -3.69,
+          40.42
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "name": "Route with an impossible length",
+    "length": -50
+  }
+}

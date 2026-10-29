@@ -1,0 +1,99 @@
+{
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
+  "name": "Routes demo register",
+  "abstract": "A tiny demo register with one building block: a data model for routes.\n",
+  "description": "Created from the [OGC building block template](https://github.com/opengeospatial/bblock-template)\nto show how a new building block is defined, documented and tested. It reuses the OGC feature model.\n",
+  "modified": "2026-10-29T15:09:04.189595",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
+      "shortCommitId": "\"862052",
+      "date": "2026-10-26T21:53:11+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/avillar/bblocks-routes-demo",
+  "gitHubRepository": "https://github.com/avillar/bblocks-routes-demo/blob/master/",
+  "baseURL": "https://avillar.github.io/bblocks-routes-demo/",
+  "viewerURL": "https://avillar.github.io/bblocks-routes-demo/",
+  "validationReport": "https://avillar.github.io/bblocks-routes-demo/build/tests/report.html",
+  "validationReportJson": "https://avillar.github.io/bblocks-routes-demo/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "ogc.demo.route",
+      "name": "Route",
+      "abstract": "A route: a road or path, described as a feature with a length in metres and a line geometry.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-10-29T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.1",
+      "sources": [
+        {
+          "title": "OGC API - Features, Part 1: Core (Feature Response)",
+          "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+        }
+      ],
+      "tags": [
+        "route",
+        "demo"
+      ],
+      "shaclShapes": {
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.geo.features.feature"
+      ],
+      "dateOfLastChange": "2026-10-29",
+      "ldContext": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/context.jsonld",
+      "schema": {
+        "application/yaml": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/schema.yaml",
+        "application/json": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/schema.json"
+      },
+      "sourceSchema": "https://avillar.github.io/bblocks-routes-demo/_sources/route/schema.yaml",
+      "sourceLdContext": "https://avillar.github.io/bblocks-routes-demo/_sources/route/context.jsonld",
+      "resolvedSchemaProperties": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/resolvedProperties.json",
+      "sourceFiles": "https://avillar.github.io/bblocks-routes-demo/_sources/route/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/avillar/bblocks-routes-demo/blob/master/build/tests/demo/route/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://avillar.github.io/bblocks-routes-demo/build/generateddocs/markdown/demo/route/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://avillar.github.io/bblocks-routes-demo/build/generateddocs/json-full/demo/route/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://avillar.github.io/bblocks-routes-demo/bblock/ogc.demo.route"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://avillar.github.io/bblocks-routes-demo/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://avillar.github.io/bblocks-routes-demo/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://avillar.github.io/bblocks-routes-demo/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://avillar.github.io/bblocks-routes-demo/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
+}
