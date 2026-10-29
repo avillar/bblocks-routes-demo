@@ -1,17 +1,9 @@
-# OGC Building Block template
+# Routes demo register
 
-This template provides a working example of an [OGC Building Block](https://opengeospatial.github.io/bblocks/register/). For more info see [the Documentation](https://ogcincubator.github.io/bblocks-docs/).
+A small demo [OGC Building Blocks](https://ogcincubator.github.io/bblocks-docs/) register with one building block, **Route** (`ogc.demo.route`): a data model for routes, built on the OGC feature model, with an example and tests.
 
-This template is a working automation recipe to define, test and document a set of Building Blocks.
+Published site: https://avillar.github.io/bblocks-routes-demo/
 
-The automation-generated documentation for this example is here: [https://opengeospatial.github.io/bblock-template/](https://opengeospatial.github.io/bblock-template/)
+Source of the block: [`_sources/route`](_sources/route). Created from the [bblock-template](https://github.com/opengeospatial/bblock-template).
 
-[Examples of using this with typical applications of OGC standards](https://github.com/ogcincubator/bblocks-examples)
-
-Please replace the contents of this README with information about your Building Block(s).
-
-# How to use this template
-
-[More information on design and usage](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md)
-
-
+To rebuild locally (requires Docker): `./build.sh`

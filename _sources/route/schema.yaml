@@ -1,0 +1,26 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Route
+description: A route is a GeoJSON feature with a MultiLineString geometry and a length in metres.
+type: object
+allOf:
+  - $ref: bblocks://ogc.geo.features.feature
+  - properties:
+      geometry:
+        properties:
+          type:
+            const: MultiLineString
+      properties:
+        type: object
+        required:
+          - length
+        properties:
+          length:
+            type: number
+            exclusiveMinimum: 0
+            description: Length of the route, in metres.
+          name:
+            type: string
+            description: Human-readable name of the route.
+    required:
+      - geometry
+      - properties

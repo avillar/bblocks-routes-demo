@@ -1,0 +1,18 @@
+{
+  "name": "Route",
+  "abstract": "A route: a road or path, described as a feature with a length in metres and a line geometry.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-29T00:00:00Z",
+  "itemClass": "schema",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Features, Part 1: Core (Feature Response)",
+      "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+    }
+  ],
+  "tags": [
+    "route",
+    "demo"
+  ]
+}

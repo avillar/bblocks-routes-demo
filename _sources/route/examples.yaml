@@ -1,0 +1,7 @@
+examples:
+  - title: Riverside route in Valencia
+    content: A short route of two separate segments, with its length in metres.
+    base-uri: https://example.com/routes/
+    snippets:
+      - language: json
+        ref: examples/valencia-route.json

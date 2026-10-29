@@ -1,0 +1,14 @@
+{
+  "type": "Feature",
+  "id": "test-route-2",
+  "geometry": {
+    "type": "MultiLineString",
+    "coordinates": [
+      [[-3.7038, 40.4168], [-3.6900, 40.4200]]
+    ]
+  },
+  "properties": {
+    "name": "Route with an impossible length",
+    "length": -50
+  }
+}

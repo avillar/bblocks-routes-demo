@@ -1,0 +1,15 @@
+{
+  "type": "Feature",
+  "id": "test-route-1",
+  "geometry": {
+    "type": "MultiLineString",
+    "coordinates": [
+      [[-3.7038, 40.4168], [-3.6900, 40.4200]],
+      [[-3.6800, 40.4250], [-3.6700, 40.4300]]
+    ]
+  },
+  "properties": {
+    "name": "Madrid test route",
+    "length": 3100
+  }
+}
