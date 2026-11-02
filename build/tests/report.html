@@ -64,9 +64,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2026-10-29T15:09:05.273144+00:00</small>
-                <p class="summary fw-semibold text-success">
-                    Number of passing building blocks: 1 / 1 (100%)
+            <small class="datetime">Generated at 2026-11-02T17:31:27.596576+00:00</small>
+                <p class="summary fw-semibold text-danger">
+                    Number of passing building blocks: 0 / 1 (0%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -75,7 +75,7 @@
                 <div class="accordion mt-2" id="bblock-reports">
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.demo.route" id="bblock-ogc.demo.route">
                             <h2 class="accordion-header bblock-title anchor-container">
-                                <button class="accordion-button collapsed" type="button"
+                                <button class="accordion-button " type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.demo\.route">
                                     <div class="flex-fill">
@@ -84,16 +84,16 @@
                                         <a class="anchor" href="#bblock-ogc.demo.route">¶</a>
                                     </div>
 
-                                    <span class="badge text-bg-success me-2">
-                                            Passed
-                                            (100% passed)
+                                    <span class="badge text-bg-danger me-2">
+                                            Tests Failed
+                                            (66.67% passed)
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.demo.route">
+                            <div class="accordion-collapse collapse show" id="bblock-collapse-ogc.demo.route">
                                 <div class="accordion-body">
-                                        <p class="summary fw-semibold text-success">
-                                            Test passed: 3 / 3
+                                        <p class="summary fw-semibold text-danger">
+                                            Test passed: 2 / 3
                                         </p>
                                         <div class="card mb-2 validation-item require-fail" id="item-ogc.demo.route-1">
                                             <div class="card-body">
@@ -151,11 +151,11 @@ On instance[&#x27;properties&#x27;][&#x27;length&#x27;]:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureShape: &lt;file:///github/workspace/test-route-2&gt;
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;file:///github/workspace/test-route-2&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -203,11 +203,11 @@ On instance[&#x27;properties&#x27;][&#x27;length&#x27;]:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureShape: &lt;file:///github/workspace/test-route-1&gt;
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;file:///github/workspace/test-route-1&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -227,7 +227,7 @@ On instance[&#x27;properties&#x27;][&#x27;length&#x27;]:
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <a class="anchor" href="#item-ogc.demo.route-3">¶</a>
                                                     <div class="float-end">
-                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-3">
@@ -245,7 +245,16 @@ On instance[&#x27;properties&#x27;][&#x27;length&#x27;]:
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
                                                                 
                                                                     
-                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;two hundred&#x27; is not of type &#x27;number&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;length&#x27;]:
+    {&#x27;description&#x27;: &#x27;Length of the route, in metres.&#x27;,
+     &#x27;exclusiveMinimum&#x27;: 0,
+     &#x27;type&#x27;: &#x27;number&#x27;,
+     &#x27;x-jsonld-id&#x27;: &#x27;http://www.opengis.net/def/dataType/OGC/1.1/length&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;length&#x27;]:
+    &#x27;two hundred&#x27;</div>
                                                                     <div class="font-monospace subsection-title mt-2">SHACL</div>
                                                                 
                                                                     
@@ -255,11 +264,11 @@ On instance[&#x27;properties&#x27;][&#x27;length&#x27;]:
   </div>
                                                                     
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureShape: &lt;https://example.com/routes/valencia-turia-1&gt;
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://example.com/routes/valencia-turia-1&gt;
 </div>
                                                     </div>
                                                 </div>

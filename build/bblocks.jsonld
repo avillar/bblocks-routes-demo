@@ -213,7 +213,7 @@
   "name": "Building Blocks - Routes demo register",
   "abstract": "A tiny demo register with one building block: a data model for routes.\n",
   "description": "Created from the [OGC building block template](https://github.com/opengeospatial/bblock-template)\nto show how a new building block is defined, documented and tested. It reuses the OGC feature model.\n",
-  "modified": "2026-10-29T15:09:04.189595",
+  "modified": "2026-11-02T17:31:26.325247",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
@@ -290,7 +290,7 @@
       "dependsOn": [
         "bblocks://ogc.geo.features.feature"
       ],
-      "dateOfLastChange": "2026-10-29",
+      "dateOfLastChange": "2026-11-02",
       "ldContext": {
         "prof:hasArtifact": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/context.jsonld",
         "prof:hasRole": "role:mapping",
@@ -315,7 +315,7 @@
       "sourceLdContext": "https://avillar.github.io/bblocks-routes-demo/_sources/route/context.jsonld",
       "resolvedSchemaProperties": "https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/resolvedProperties.json",
       "sourceFiles": "https://avillar.github.io/bblocks-routes-demo/_sources/route/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/avillar/bblocks-routes-demo/blob/master/build/tests/demo/route/",
       "documentation": {
         "markdown": {

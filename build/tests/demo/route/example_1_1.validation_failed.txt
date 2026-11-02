@@ -1,5 +1,5 @@
 Validation report for ogc.demo.route - Route
-Generated 2026-10-29T15:09:05.263696+00:00
+Generated 2026-11-02T17:31:27.580706+00:00
 === Files ===
 Using examples/valencia-route.json from examples
 JSON-LD context is present - uplifting
@@ -8,7 +8,18 @@ Output Turtle example_1_1.ttl created
 === End Files ===
 
 === JSON Schema ===
-Validation passed
+
+** Validation error **
+ValidationError: 'two hundred' is not of type 'number'
+
+Failed validating 'type' in schema['allOf'][1]['properties']['properties']['properties']['length']:
+    {'description': 'Length of the route, in metres.',
+     'exclusiveMinimum': 0,
+     'type': 'number',
+     'x-jsonld-id': 'http://www.opengis.net/def/dataType/OGC/1.1/length'}
+
+On instance['properties']['length']:
+    'two hundred'
 === End JSON Schema ===
 
 === SHACL ===
@@ -17,11 +28,11 @@ Validation result for https://opengeospatial.github.io/bblocks/registereditems/g
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureShape: <https://example.com/routes/valencia-turia-1>
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: <https://example.com/routes/valencia-turia-1>
 
 === End SHACL ===
 
