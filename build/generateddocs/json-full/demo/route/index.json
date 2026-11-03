@@ -33,7 +33,6 @@
     {
       "title": "Riverside route in Valencia",
       "content": "A short route of two separate segments, with its length in metres.",
-      "base-uri": "https://example.com/routes/",
       "snippets": [
         {
           "language": "json",
@@ -51,8 +50,8 @@
         {
           "language": "ttl",
           "url": "https://avillar.github.io/bblocks-routes-demo/build/tests/demo/route/example_1_1.ttl",
-          "sizeBytes": 671,
-          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix ns1: <http://www.opengis.net/def/dataType/OGC/1.1/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.com/routes/valencia-turia-1> a geojson:Feature ;\n    rdfs:label \"Turia riverside route\" ;\n    ns1:length \"200\" ;\n    geojson:geometry [ a geojson:MultiLineString ;\n            geojson:coordinates ( ( ( -3.763e-01 3.94699e+01 ) ( -3.702e-01 3.94725e+01 ) ( -3.651e-01 3.9478e+01 ) ) ( ( -3.6e-01 3.9481e+01 ) ( -3.549e-01 3.94864e+01 ) ( -3.49e-01 3.94915e+01 ) ) ) ] .\n\n"
+          "sizeBytes": 669,
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix ns1: <http://www.opengis.net/def/dataType/OGC/1.1/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<file:///github/workspace/valencia-turia-1> a geojson:Feature ;\n    rdfs:label \"Turia riverside route\" ;\n    ns1:length \"200\" ;\n    geojson:geometry [ a geojson:MultiLineString ;\n            geojson:coordinates ( ( ( -3.763e-01 3.94699e+01 ) ( -3.702e-01 3.94725e+01 ) ( -3.651e-01 3.9478e+01 ) ) ( ( -3.6e-01 3.9481e+01 ) ( -3.549e-01 3.94864e+01 ) ( -3.49e-01 3.94915e+01 ) ) ) ] .\n\n"
         }
       ]
     }
