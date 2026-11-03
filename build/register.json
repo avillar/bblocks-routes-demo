@@ -3,12 +3,12 @@
   "name": "Routes demo register",
   "abstract": "A tiny demo register with one building block: a data model for routes.\n",
   "description": "Created from the [OGC building block template](https://github.com/opengeospatial/bblock-template)\nto show how a new building block is defined, documented and tested. It reuses the OGC feature model.\n",
-  "modified": "2026-11-03T11:10:27.655413",
+  "modified": "2026-11-03T15:46:16.818673",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
-      "shortCommitId": "\"862052",
-      "date": "2026-10-26T21:53:11+00:00\""
+      "commitId": "\"373c26d1cdf143759ae2c602c0713e98e6af6fc9",
+      "shortCommitId": "\"373c26",
+      "date": "2026-11-03T13:31:34+00:00\""
     }
   },
   "gitRepository": "https://github.com/avillar/bblocks-routes-demo",
@@ -29,16 +29,6 @@
       "dateTimeAddition": "2026-10-29T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "sources": [
-        {
-          "title": "OGC API - Features, Part 1: Core (Feature Response)",
-          "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
-        }
-      ],
-      "tags": [
-        "route",
-        "demo"
-      ],
       "shaclShapes": {
         "ogc.geo.features.feature": [
           "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
@@ -60,13 +50,13 @@
       "validationPassed": false,
       "testOutputs": "https://github.com/avillar/bblocks-routes-demo/blob/master/build/tests/demo/route/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://avillar.github.io/bblocks-routes-demo/build/generateddocs/markdown/demo/route/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://avillar.github.io/bblocks-routes-demo/build/generateddocs/json-full/demo/route/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://avillar.github.io/bblocks-routes-demo/build/generateddocs/markdown/demo/route/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",

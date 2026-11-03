@@ -222,9 +222,6 @@ Links to the schema:
 You can find the full JSON-LD context here:
 [context.jsonld](https://avillar.github.io/bblocks-routes-demo/build/annotated/demo/route/context.jsonld)
 
-## Sources
-
-* [OGC API - Features, Part 1: Core (Feature Response)](https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7)
 
 # For developers
 
